@@ -35,10 +35,10 @@ const Sidebar = () => {
             return (
               <li key={idx} onClick={() => dispatch(setSidebarOff())}>
                 <Link
-                  to={`category/${category}`}
+                  to={`category/${category.slug}`}
                   className="cat-list-link text-capitalize"
                 >
-                  {String(category).replace("-", " ")}
+                  {category.name.replace("-", " ")}
                 </Link>
               </li>
             );
